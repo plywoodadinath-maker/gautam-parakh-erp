@@ -1,32 +1,39 @@
-<!-- LICENSE MODAL -->
-<div id="licenseModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-  <div class="bg-white p-8 rounded-xl w-96 text-center shadow-lg">
-    <h2 class="text-2xl font-bold mb-4 text-indigo-600">Gautam Parakh ERP</h2>
-    <p class="mb-4">Enter your license key to unlock full features:</p>
-    <input type="text" id="licenseInput" placeholder="GPARAKH-XXXXXX" class="w-full border px-4 py-2 rounded mb-4">
-    <button id="activateBtn" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">Activate</button>
-    <p id="licenseError" class="text-red-600 mt-2 text-sm hidden">Invalid license key!</p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GautamParakhERP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GautamParakhERP</h1>
+    <p>Offline ERP Software for Small Businesses | Windows & Android</p>
+  </header>
 
-<script>
-document.getElementById('activateBtn').onclick = function() {
-    const key = document.getElementById('licenseInput').value.trim();
-    // Simple validation for demo: must start with GPARAKH-
-    if(key.startsWith("GPARAKH-") && key.length > 10){
-        localStorage.setItem('erpLicenseKey', key);
-        document.getElementById('licenseModal').style.display = 'none';
-        alert("✅ License activated successfully!");
-    } else {
-        document.getElementById('licenseError').classList.remove('hidden');
-    }
-};
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li>Billing & POS</li>
+      <li>Inventory Management</li>
+      <li>Accounts & GST</li>
+      <li>GSTR-1 / 3B Export</li>
+      <li>License-key protection & encryption</li>
+      <li>Advanced Reports</li>
+    </ul>
+  </section>
 
-// Auto-check license on load
-window.onload = function(){
-    const savedKey = localStorage.getItem('erpLicenseKey');
-    if(savedKey && savedKey.startsWith("GPARAKH-")) {
-        document.getElementById('licenseModal').style.display = 'none';
-    }
-};
-</script>
+  <section>
+    <h2>Download</h2>
+    <p>Get the latest version of GautamParakhERP:</p>
+    <ul>
+      <li><a href="https://github.com/YOURUSERNAME/GautamParakhERP/raw/main/GautamParakhERP_Upgraded.zip">Download ZIP</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2026 Gautam Parakh | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
